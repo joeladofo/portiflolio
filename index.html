@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joel's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* General styles */
+    header {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #4facfe;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Animation */
+    .skills-bar {
+      background-color: #eee;
+      position: relative;
+      margin: 10px 0;
+      height: 20px;
+      border-radius: 5px;
+    }
+
+    .skills-bar > div {
+      background: #4facfe;
+      height: 100%;
+      width: 0;
+      animation: fill-bar 2s forwards;
+      border-radius: 5px;
+    }
+
+    @keyframes fill-bar {
+      to {
+        width: var(--percent);
+      }
+    }
+    #contact {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+
+  #contact h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact input, #contact textarea, #contact button {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+  }
+
+  #contact input, #contact textarea {
+    background: white;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #contact input:focus, #contact textarea:focus {
+    outline: none;
+    border: 2px solid #4facfe;
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+  }
+
+  #contact button {
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  #contact button:hover {
+    background: #555;
+  }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Joel's Portfolio</h1>
+    <p>Front-End | Html | CSS</p>
+  </header>
+
+  <section id="about">
+    <h2>About Joel</h2>
+    <p>Passionate web developer with expertise in building responsive, user-friendly websites. Focused on creating solutions
+      that positively impact users.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>Java + PHP</p>
+        <a href="#">Live Demo</a>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>HTML + CSS</p>
+        <a href="#">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-bar" style="--percent: 80%;">
+      <div></div>
+    </div>
+    <p>html - 80%</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Joel</h2>
+    <form>
+      <input type="text" placeholder="Name" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <textarea placeholder="Your Message" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Joel's Portfolio &copy; 2025</p>
+  </footer>
+</body>
+
+</html>
